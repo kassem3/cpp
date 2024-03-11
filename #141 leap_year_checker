@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int yr=2000;
+  cout<<"Enter the year: \n";
+  cin>>yr;
+  
+  //not a 4 digit number
+  if(yr<1000||yr>9999)
+    cout<<"Invalid!";
+    
+  //is a leap year
+  else if(yr%4==0 || yr%400==0 || yr%100!=0 && yr%400==0)
+    cout<<yr<<" is a leap year\n";
+  
+  //is NOT a leap year
+  else
+    cout<<yr<<" is NOT a leap year\n";
+  
+}
