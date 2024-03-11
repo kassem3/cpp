@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int guess;
+    int tries = 0;
+    cout << "I have a number 1-10.\nTry to guess it: ";
+    
+    // 1st try
+    cin >> guess;
+    tries++;
+    
+    while (guess != 8 && tries < 10) {
+        cout << "Wrong guess, try again: ";
+        cin >> guess;
+        tries++;
+    }
+    
+    if (guess == 8) {
+        cout << "That is correct. YOU WON!\n";
+    } else if (tries >= 10) {
+        cout << "You're out of tries. GAME OVER!\n";
+    }
+    return 0;
+}
